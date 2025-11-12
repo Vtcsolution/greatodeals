@@ -6,6 +6,8 @@ import office2 from '../../assets/images/Pak_office.png'
 import netherland_office from  '../../assets/images/netherland_office.png'
 import Zia_image from '../../assets/images/CEO_ZIA.png'
 import umar_image from '../../assets/images/umar_image.png'
+import { Helmet } from 'react-helmet-async';
+
 const About = () => {
   const [activeSection, setActiveSection] = useState(0);
   const [expandedTech, setExpandedTech] = useState(1);
@@ -46,7 +48,7 @@ const About = () => {
 
   const stats = [
     { number: "9+", label: "years in business", icon: Clock },
-    { number: "500+", label: "engineers & developers", icon: Users },
+    { number: "120+", label: "engineers & developers", icon: Users },
     { number: "100%", label: "client satisfaction rate", icon: Star },
     { number: ">60%", label: "cost saved", icon: DollarSign }
   ];
@@ -244,6 +246,17 @@ const About = () => {
   ];
 
   return (
+    
+    <>
+      <Helmet>
+        <title>About Greatodeal | AI SaaS & Automation Experts</title>
+        <meta
+          name="description"
+          content="Learn about Greatodeal — experts in AI SaaS, automation, and web development solutions worldwide."
+        />
+        <link rel="canonical" href="https://greatodeal.com/about" />
+      </Helmet>
+
     <div className="min-h-screen bg-gray-900 text-gray-200 overflow-x-hidden">
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center pt-24 px-4 sm:px-6 lg:px-8">
@@ -783,6 +796,7 @@ const About = () => {
 </section>
 
     </div>
+    </>
   );
 };
 
