@@ -517,6 +517,15 @@ const Contact = () => {
     document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
   };
   return (
+    <>
+      <Helmet>
+        <title>About Greatodeal | AI SaaS & Automation Experts</title>
+        <meta
+          name="description"
+          content="Learn about Greatodeal — experts in AI SaaS, automation, and web development solutions worldwide."
+        />
+        <link rel="canonical" href="https://greatodeal.com/contact" />
+      </Helmet>
     <div className="min-h-screen bg-gray-900 text-gray-200 overflow-x-hidden font-inter" style={{ backgroundColor: '#0A0A0A' }}>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#121212] via-[#1E1E1E] to-[#121212]">
@@ -915,6 +924,7 @@ const Contact = () => {
         ))}
       </AnimatePresence>
     </div>
+    </>
   );
 };
 
