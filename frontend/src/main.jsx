@@ -5,6 +5,7 @@ import App from './App.jsx';
 import './styles/global.css';
 import { initGA, trackPage } from './analytics'; // Analytics functions
 import { AdminProvider } from './components/contexts/AdminContext.jsx';
+import { HelmetProvider } from 'react-helmet-async';
 
 // ✅ Initialize Google Analytics
 initGA();
@@ -12,10 +13,14 @@ initGA();
 ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
+          <HelmetProvider>
+
       <AdminProvider> {/* Wrap with AdminProvider for admin context */}
         <GAListener /> {/* Tracks page views on every route change */}
         <App />
       </AdminProvider>
+            </HelmetProvider>
+
     </BrowserRouter>
   </StrictMode>,
 );
