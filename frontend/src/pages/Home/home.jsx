@@ -251,6 +251,17 @@ const services = [
     
 
     return (
+
+      <div>
+      <Helmet>
+        <title>About Greatodeal | AI SaaS & Automation Experts</title>
+        <meta
+          name="description"
+          content="Learn about Greatodeal — experts in AI SaaS, automation, and web development solutions worldwide."
+        />
+        <link rel="canonical" href="https://greatodeal.com" />
+      </Helmet>
+
         <div className="min-h-screen bg-[#121212] text-[#E5E7EB] overflow-x-hidden">
             {/* Hero Section */}
             <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
@@ -714,6 +725,7 @@ const services = [
   </div>
 </section>
 
+        </div>
         </div>
     );
 };
